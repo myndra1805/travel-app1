@@ -21,6 +21,10 @@ header nav .logo {
   width: 50px;
 }
 
+header nav .icon-menu {
+  display: none;
+}
+
 header nav ul {
   list-style: none;
   display: flex;
@@ -69,6 +73,7 @@ main #home {
   justify-content: center;
   padding: 0 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 main #home div {
@@ -120,6 +125,7 @@ main .service-container {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 main #service .service-box {
@@ -248,6 +254,7 @@ main #comments .container-comments {
   justify-content: center;
   gap: 20px;
   align-items: end;
+  flex-wrap: wrap;
 }
 
 main #comments .container-comments .result-comment {
@@ -323,6 +330,7 @@ footer {
   padding: 20px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -352,4 +360,107 @@ footer .medsos a {
 
 .color-blue {
   color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
+  header nav .icon-menu {
+    display: inline-flex;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 3px 3px 3px rgb(177, 177, 177);
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    height: 0;
+    top: 70px;
+  }
+
+  header nav ul.show {
+    padding: 10px 0;
+    height: auto;
+  }
+
+  header nav ul li {
+    margin: 0 20px !important;
+  }
+  header nav ul li a {
+    display: block;
+  }
+
+  main #home div {
+    width: 100%;
+  }
+
+  main #service .service-box {
+    width: 40%;
+  }
+
+  main #teams .teams-container {
+    margin: 0 20px;
+  }
+
+  main #comments .container-comments .result-comment {
+    width: 40%;
+  }
+
+  main #comments .container-comments .form-comment {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main #about {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  main #service .service-box {
+    width: 80%;
+  }
+
+  main #teams .teams-container {
+    margin: 0 10px;
+  }
+
+  main #teams .teams-container .teams-container-box {
+    width: 40%;
+  }
+
+  main #comments .container-comments .result-comment {
+    width: 80%;
+  }
+
+  main #comments .container-comments .form-comment {
+    width: 80%;
+  }
+
+  footer {
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer p,
+  footer .medsos {
+    width: 100%;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  footer .medsos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

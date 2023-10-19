@@ -53,3 +53,9 @@ navLinks.map((nav) => {
     nav.classList.add("active");
   });
 });
+
+const btnMenu = document.querySelector(".icon-menu");
+btnMenu.addEventListener("click", (event) => {
+  const menu = document.querySelector("header nav ul");
+  menu.classList.toggle("show");
+});
